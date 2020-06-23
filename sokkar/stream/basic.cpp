@@ -52,11 +52,9 @@ string SocketStream::read_string() {
 	int bytes_read = 0, read = 0;
 	
 	do {
-		cout << "\nReading...\n";
 		for(int i = 0; i < chunk_size; i++)
 			buffer[i] = 0;
 		read = this->sock->read(buffer, chunk_size);
-		cout << "\n\nREAD DONE. (" << read << ")\n\n\n";
 		bytes_read += read;
 		if(read < 0){
 			cout << "Error!";
@@ -68,9 +66,6 @@ string SocketStream::read_string() {
 			if(!buffer[i])
 				end = true;
 		}
-		cout << "????\n";
-
-		//printf("%s", buffer);
 
 		str += string(buffer);
 

@@ -34,7 +34,7 @@ bool Socket::__connect() {
 
     	this->address = string(addr);
 
-    	cout << "Address: " << this->address << endl;
+    	//cout << "Address: " << this->address << endl;
 
     	tried_domain = 1;
 
